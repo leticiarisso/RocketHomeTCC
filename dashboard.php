@@ -347,7 +347,7 @@ if(isset($_POST['sub'])){
                       />
                     </svg>
                   </span>
-                  <span class="ml-2 text-sm"> Authenticação </span>
+                  <span class="ml-2 text-sm"> Autenticação </span>
                   <span aria-hidden="true" class="ml-auto">
                     <!-- active class 'rotate-180' -->
                     <svg
