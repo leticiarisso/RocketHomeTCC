@@ -69,7 +69,7 @@ if(isset($_POST['sub'])){
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
-                        <img src="<?php echo $f['image']?>" style="width:60%">
+                        <img src="<?php echo $f['image']?>" style="width:180px" style="height:120px">
                         
                             
                         </div>
@@ -88,12 +88,14 @@ if(isset($_POST['sub'])){
                                 <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Sobre você!</a>
                                 </li>
-                               
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="dashboard.php" role="tab" aria-controls="home" aria-selected="true">Dashboard</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Editar Perfil"/>
+                        <input type="submit" class="profile-edit-btn" href="edit.php" name="btnAddMore" value="Editar Perfil"/>
                     </div>
                 </div>
                 <div class="row">

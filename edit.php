@@ -43,30 +43,7 @@ if(isset($_POST['sub'])){
                         <input type="password" name="pass" value="<?php echo $f['password']?>">
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        city
-                        <select name="city">
-                            <option value="">-select-</option>
-                        
-                            <?php
-                            $sqlCity= mysqli_query($con, "select * from city");
-                                                        
-                            while($item = mysqli_fetch_assoc($sqlCity))
-                            {
-                                $nomeItem = utf8_encode($item['nameCity']);
-              
-                                if($f['city'] == $nomeItem){
-                                    echo "                                
-                                        <option value=$nomeItem selected='selected'>$nomeItem</option>                                
-                                    ";
-                                }else{
-                                    echo " <option value=$nomeItem>$nomeItem</option>";
-                                }
-                            }
-                            ?>
-                    </td>
-                </tr>
+               
                 <tr>
                     <td>
                         Gender

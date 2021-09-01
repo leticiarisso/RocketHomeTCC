@@ -1,0 +1,50 @@
+:root {
+  --light: #edf2f9;
+  --dark: #152e4d;
+  --darker: #12263f;
+  /*  */
+  --color-primary: var( --color-violet);
+  --color-primary-50: var( --color-violet-50);
+  --color-primary-100: var(--color-violet-100);
+  --color-primary-light: var(--color-violet-light);
+  --color-primary-lighter: var(--color-violet-lighter);
+  --color-primary-dark: var(--color-violet-dark);
+  --color-primary-darker: var(--color-violet-darker);
+  /*  */
+  
+  /*  */
+  --color-violet: #7c3aed;
+  --color-violet-50: #f5f3ff;
+  --color-violet-100: #ede9fe;
+  --color-violet-light: #8b5cf6;
+  --color-violet-lighter: #a78bfa;
+  --color-violet-dark: #6d28d9;
+  --color-violet-darker: #5b21b6;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .toggle:checked + span {
+    @apply top-0 left-6 bg-primary;
+  }
+  .toggle:disabled + span {
+    @apply bg-gray-500 shadow-none;
+  }
+  .toggle:checked:disabled {
+    @apply bg-gray-200;
+  }
+  .toggle:checked:disabled + span {
+    @apply shadow-none bg-primary-lighter;
+  }
+  .toggle:focus + span {
+    @apply ring ring-primary-lighter;
+  }
+
+  input:invalid.invalid,
+  textarea:invalid.invalid {
+    @apply ring ring-danger-light dark:ring-danger;
+  }
+}
