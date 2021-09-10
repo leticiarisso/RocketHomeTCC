@@ -88,7 +88,6 @@
 
 <div class="container">
 	<div class="conheca" style="text-align: center;">CONHEÇA NOSSOS PLANOS</div>
-	<div class="row">
 		<div class="coluna">
 		  <img src="Rocket/images/Planos/Simples.jpg" alt="plano" style="width:100%">
 		</div>
@@ -97,7 +96,7 @@
 		</div>
 		<div class="coluna">
 		  <img src="Rocket/images/Planos/Luxo.jpg" alt="plano" style="width:100%">
-		</div></div>
+		</div>
   
 </div>
 
@@ -110,66 +109,3 @@
 
 
 
-<html>
-    <head>
-        
-    </head>
-    <body>
-<table>
-    <tr>
-        <td>
-            Name
-        </td><td>
-            
-<?php echo $f['name'];?>
-            </td>
-    </tr>
-    <tr>
-    <td> Username</td>
-    
-    <td>
-            
-<?php
-echo $f['username'];?>
-        </td></tr>
-<tr><td> Password</td>
-    <td>
-<?php
-echo $f['password']."<br>";?>
-    </td></tr>
-  <tr><td> City </td>   <td>           
- <?php
- echo $f['city']."<br>";?></td></tr>
-  <tr>
-      <td>Gender</td>
-      <td><?php
-echo $f['gender']."<br>";?></td>
-  </tr>
-  <tr><td> Image</td><td>
-
- <img src="<?php
-echo $f['image'];?>" width="100px" height="100px">
-</td>
-
-</tr>
-</table>
-<a href="edit.php">Edit</a>
-<a href="delete.php">Delete</a>
-<a href="logout.php">Logout</a>
-
-<?php
-    if($_SESSION['profile']=='Admin'){
-        echo "
-            <a href='viewall.php'>View All Users</a>
-            <a href='reg_city.php'>Reg City</a>
-        ";
-    }else{
-        echo "
-            <a href=''>Você não ADM</a>
-        ";
-    }
-?>
-
-
-    </body>
-</html>

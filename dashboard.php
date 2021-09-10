@@ -111,14 +111,14 @@ if(isset($_POST['sub'])){
                     role="menuitem"
                     class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700"
                   >
-                    Project Mangement (soon)
+                    Gestão de Projetos 
                   </a>
                   <a
                     href="#"
                     role="menuitem"
                     class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700"
                   >
-                    E-Commerce (soon)
+                    E-Commerce 
                   </a>
                 </div>
               </div>
@@ -867,14 +867,14 @@ if(isset($_POST['sub'])){
                       role="menuitem"
                       class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700"
                     >
-                      Project Mangement (soon)
+                      Gestão de Projetos
                     </a>
                     <a
                       href="#"
                       role="menuitem"
                       class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700"
                     >
-                      E-Commerce (soon)
+                      E-Commerce
                     </a>
                   </div>
                 </div>
