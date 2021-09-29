@@ -37,10 +37,7 @@ if(isset($_POST['sub'])){
 		<img class="logo" src="Rocket/images/Logo3.png" alt="logo">
 		<nav>
 			<ul class ="nav__links">
-				<li class="nav-item">
-					<a class="nav-link" href="#">PRIVACIDADE</a>
-				  </li>
-				  <li>|</li>
+				
 				  <li class="nav-item">
 					<a class="nav-link" href="#">DIFERENCIAIS</a>
 				  </li>
@@ -63,7 +60,7 @@ if(isset($_POST['sub'])){
 	</header>
 
 
-
+<body>
 <div class="container emp-profile">
             <form method="post">
                 <div class="row">
@@ -143,3 +140,5 @@ if(isset($_POST['sub'])){
                 </div>
             </form>           
         </div>
+
+<div class="footer">f</footer>

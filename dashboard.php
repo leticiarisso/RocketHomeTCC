@@ -37,6 +37,34 @@ if(isset($_POST['sub'])){
     <link rel="stylesheet" href="dashboard/public/build/css/tailwind.css" />
     <script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@0.5.x/dist/component.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses', 'Profit'],
+          ['2014', 1000, 400, 200],
+          ['2015', 1170, 460, 250],
+          ['2016', 660, 1120, 300],
+          ['2017', 1030, 540, 350]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Company Performance',
+            subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+
   </head>
   <body>
     <div x-data="setup()" x-init="$refs.loading.classList.add('hidden'); setColors(color);" :class="{ 'dark': isDark}">
@@ -114,11 +142,11 @@ if(isset($_POST['sub'])){
                     Gestão de Projetos 
                   </a>
                   <a
-                    href="#"
+                    href="franqueados.php"
                     role="menuitem"
                     class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700"
                   >
-                    E-Commerce 
+                    Franqueados 
                   </a>
                 </div>
               </div>
@@ -223,101 +251,7 @@ if(isset($_POST['sub'])){
 
               <!-- Pages links -->
               <div x-data="{ isActive: false, open: false }">
-                <!-- active classes 'bg-primary-100 dark:bg-primary' -->
-                <!-- <a
-                  href="#"
-                  @click="$event.preventDefault(); open = !open"
-                  class="flex items-center p-2 text-gray-500 transition-colors rounded-md dark:text-light hover:bg-primary-100 dark:hover:bg-primary"
-                  :class="{ 'bg-primary-100 dark:bg-primary': isActive || open }"
-                  role="button"
-                  aria-haspopup="true"
-                  :aria-expanded="(open || isActive) ? 'true' : 'false'"
-                > -->
-                  <!-- <span aria-hidden="true">
-                    <svg
-                      class="w-5 h-5"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"
-                      />
-                    </svg>
-                  </span> -->
-                  <!-- <span class="ml-2 text-sm"> Pages </span>
-                  <span aria-hidden="true" class="ml-auto"> -->
-                    <!-- active class 'rotate-180' -->
-                    <!-- <svg
-                      class="w-4 h-4 transition-transform transform"
-                      :class="{ 'rotate-180': open }"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </span>
-                </a>
-                <div x-show="open" class="mt-2 space-y-2 px-7" role="menu" arial-label="Pages">
-                   active & hover classes 'text-gray-700 dark:text-light' 
-                   inActive classes 'text-gray-400 dark:text-gray-400' 
-                  <a
-                    href="pages/blank.html"
-                    role="menuitem"
-                    class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:text-gray-400 dark:hover:text-light hover:text-gray-700"
-                  >
-                    Blank
-                  </a>
-                  <a
-                    href="pages/404.html"
-                    role="menuitem"
-                    class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:text-gray-400 dark:hover:text-light hover:text-gray-700"
-                  >
-                    404
-                  </a>
-                  <a
-                    href="pages/500.html"
-                    role="menuitem"
-                    class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:text-gray-400 dark:hover:text-light hover:text-gray-700"
-                  >
-                    500
-                  </a>
-                  <a
-                    href="#"
-                    role="menuitem"
-                    class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:text-gray-400 dark:hover:text-light hover:text-gray-700"
-                  >
-                    Profile (soon)
-                  </a>
-                  <a
-                    href="#"
-                    role="menuitem"
-                    class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700"
-                  >
-                    Pricing (soon)
-                  </a>
-                  <a
-                    href="#"
-                    role="menuitem"
-                    class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700"
-                  >
-                    Kanban (soon)
-                  </a>
-                  <a
-                    href="#"
-                    role="menuitem"
-                    class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700"
-                  >
-                    Feed (soon)
-                  </a>
-                </div>
-              </div> -->
+            
 
               <!-- Authentication links -->
               <div x-data="{ isActive: false, open: false}">

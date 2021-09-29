@@ -122,7 +122,6 @@ form input[type="submit"]:hover {
     background: linear-gradient(to right, #4776E6, #8e54e9);
 }
 
-
 .conheca{
 	margin-top: 640px;
 	font-family: "Bebas Neue";
@@ -130,6 +129,10 @@ form input[type="submit"]:hover {
 	color:rgb(132, 0, 255);
 	
 }
-.coluna{
-	width: 33.33%;
+
+.row{
+	margin:0;
 }
+
+
+

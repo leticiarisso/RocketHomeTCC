@@ -1,6 +1,6 @@
 body{
 background-image: url("bk.jpg");
-background-repeat:round;
+background-repeat: no-repeat;
 }
 
 li, a{
@@ -167,4 +167,13 @@ button:hover{
 }
 .sair:hover{
     color: #0300cc;
+}
+
+
+
+
+footer{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height:300px;
 }

@@ -44,7 +44,6 @@ if(isset($_GET["action"]))
 			if($values["item_id"] == $_GET["id"])
 			{
 				unset($_SESSION["shopping_cart"][$keys]);
-				echo '<script>alert("Item Removed")</script>';
 				echo '<script>window.location="carrinho.php"</script>';
 			}
 		}
@@ -55,20 +54,48 @@ if(isset($_GET["action"]))
 <!DOCTYPE html>
 <html>
 	<head>
+	<link rel="shortcut icon" href="Rocket/images/logo.png" type="image/x-png"/>
+
 		<title>RocketHome</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="Rocket/css/carrinho.css">
+
 	</head>
 	<body>
+	<header>
+		<img class="logo" src="Rocket/images/Logo3.png" alt="logo">
+		<nav>
+			<ul class ="nav__links">
+				
+				  <li class="nav-item">
+					<a class="nav-link" href="#">DIFERENCIAIS</a>
+				  </li>
+				  <li>|</li>
+				  <li class="nav-item">
+					<a class="nav-link" href="#">QUEM SOMOS?</a>
+				  </li>
+				  <li>|</li>
+				  <li class="nav-item">
+					<a class="nav-link" href="carrinho.php">PRODUTOS</a>
+				  </li>
+				
+			</ul>
+		</nav>
+		<div class ="loginmds">
 		
-		<br />
+		<a class="cta" href="home.php"><button>Início</button></a>
+		
+		</div>
+	</header>
+
+
 		<div class="container">
+			
 			<br />
-			<br />
-			<br />
-			<h3 align="center" style="font-family: Bebas Neue; font-size: 60px;">Planos - RocketHome</a></h3><br />
-			<br /><br />
+			<h3 align="center" style="font-family: Bebas Neue; font-size: 60px;">SELECIONE OS PLANOS</a></h3><br />
+			
 			<?php
 				$query = "SELECT * FROM tbl_product ORDER BY id ASC";
 				$result = mysqli_query($connect, $query);
@@ -91,25 +118,7 @@ if(isset($_GET["action"]))
 						<input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
 
 						<input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />
-						<style type="text/css">
-							.btn-sample { 
-								color: #ffffff; 
-								background-color: #611BBD; 
-								border-color: #130269; 
-								width: 60%;
-								height: 30%;
-								background: #fff;
-								background: -webkit-linear-gradient(right, #6000de, #0044ff, #c013eb, #9900ff);
-								background: -o-linear-gradient(right, #6000de, #0044ff, #c013eb, #9900ff);
-								background: -moz-linear-gradient(right, #6000de, #0044ff, #c013eb, #9900ff);
-								background: linear-gradient(right, #6000de, #0044ff, #c013eb, #9900ff);
-								font-family: Bebas Neue;
-								font-size: 20px;
-  
-
-  
-																} 
-						</style>
+						
 						<button type="submit" name="add_to_cart" style="margin-top:5px; ;" class="btn-sample" value="Adicionar na Lista" >Adicionar na Lista</button>
 					</div>
 				</form>
@@ -120,7 +129,6 @@ if(isset($_GET["action"]))
 			?>
 			<div style="clear:both"></div>
 			<br />
-			<h3>Detalhes do Serviço</h3>
 			<div class="table-responsive">
 				<table class="table table-bordered">
 					<tr>

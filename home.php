@@ -27,10 +27,7 @@
 		<img class="logo" src="Rocket/images/Logo3.png" alt="logo">
 		<nav>
 			<ul class ="nav__links">
-				<li class="nav-item">
-					<a class="nav-link" href="#">PRIVACIDADE</a>
-				  </li>
-				  <li>|</li>
+				
 				  <li class="nav-item">
 					<a class="nav-link" href="#">DIFERENCIAIS</a>
 				  </li>
@@ -88,16 +85,18 @@
 
 <div class="container">
 	<div class="conheca" style="text-align: center;">CONHEÇA NOSSOS PLANOS</div>
-		<div class="coluna">
+	<div class="row">
+
+	<div class="col-sm">
 		  <img src="Rocket/images/Planos/Simples.jpg" alt="plano" style="width:100%">
 		</div>
-		<div class="coluna">
+		<div class="col-sm">
 		  <img src="Rocket/images/Planos/Medio.jpg" alt="plano" style="width:100%">
 		</div>
-		<div class="coluna">
+		<div class="col-sm">
 		  <img src="Rocket/images/Planos/Luxo.jpg" alt="plano" style="width:100%">
 		</div>
-  
+</div>
 </div>
 
 
