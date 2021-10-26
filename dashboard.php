@@ -39,31 +39,28 @@ if(isset($_POST['sub'])){
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawChart);
+                        <script type="text/javascript">
+                          google.charts.load("current", {packages:["corechart"]});
+                          google.charts.setOnLoadCallback(drawChart);
+                          function drawChart() {
+                            var data = google.visualization.arrayToDataTable([
+                              ['Task', 'Hours per Day'],
+                              ['Faturamento',     1],
+                              ['Clientes',      5],
+                              ['Pedidos',  1],
+                              ['Comandos', 1],
+                              ['',    0]
+                            ]);
 
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Year', 'Sales', 'Expenses', 'Profit'],
-          ['2014', 1000, 400, 200],
-          ['2015', 1170, 460, 250],
-          ['2016', 660, 1120, 300],
-          ['2017', 1030, 540, 350]
-        ]);
+                            var options = {
+                              title: '',
+                              pieHole: 0.4,
+                            };
 
-        var options = {
-          chart: {
-            title: 'Company Performance',
-            subtitle: 'Sales, Expenses, and Profit: 2014-2017',
-          }
-        };
-
-        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
-
-        chart.draw(data, google.charts.Bar.convertOptions(options));
-      }
-    </script>
+                            var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+                            chart.draw(data, options);
+                          }
+                        </script>
 
   </head>
   <body>
@@ -134,13 +131,7 @@ if(isset($_POST['sub'])){
                   >
                     Início
                   </a>
-                  <a
-                    href="#"
-                    role="menuitem"
-                    class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700"
-                  >
-                    Gestão de Projetos 
-                  </a>
+                  
                   <a
                     href="franqueados.php"
                     role="menuitem"
@@ -204,20 +195,7 @@ if(isset($_POST['sub'])){
                   >
                     Relatório
                   </a>
-                  <a
-                    href="#"
-                    role="menuitem"
-                    class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:text-gray-400 dark:hover:text-light hover:text-gray-700"
-                  >
-                    Clientes
-                  </a>
-                  <a
-                    href="#"
-                    role="menuitem"
-                    class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700"
-                  >
-                    Pedidos
-                  </a>
+                  
                   <!-- <a
                     href="#"
                     role="menuitem"
@@ -796,13 +774,7 @@ if(isset($_POST['sub'])){
                     >
                       Default
                     </a>
-                    <a
-                      href="#"
-                      role="menuitem"
-                      class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700"
-                    >
-                      Gestão de Projetos
-                    </a>
+                    
                     <a
                       href="#"
                       role="menuitem"
@@ -1176,9 +1148,9 @@ if(isset($_POST['sub'])){
                     >
                       Faturamento
                     </h6>
-                    <span class="text-xl font-semibold">R$330,000</span>
+                    <span class="text-xl font-semibold">R$0,00</span>
                     <span class="inline-block px-2 py-px ml-2 text-xs text-green-500 bg-green-100 rounded-md">
-                      +1.4%
+                      +0%
                     </span>
                   </div>
                   <div>
@@ -1209,9 +1181,9 @@ if(isset($_POST['sub'])){
                     >
                       Clientes
                     </h6>
-                    <span class="text-xl font-semibold">391</span>
+                    <span class="text-xl font-semibold">5</span>
                     <span class="inline-block px-2 py-px ml-2 text-xs text-green-500 bg-green-100 rounded-md">
-                      +2.6%
+                      +1%
                     </span>
                   </div>
                   <div>
@@ -1242,9 +1214,9 @@ if(isset($_POST['sub'])){
                     >
                       Pedidos
                     </h6>
-                    <span class="text-xl font-semibold">3,921</span>
+                    <span class="text-xl font-semibold">0</span>
                     <span class="inline-block px-2 py-px ml-2 text-xs text-green-500 bg-green-100 rounded-md">
-                      +2.1%
+                      +0%
                     </span>
                   </div>
                   <div>
@@ -1275,9 +1247,9 @@ if(isset($_POST['sub'])){
                     >
                       Comandos
                     </h6>
-                    <span class="text-xl font-semibold">33,516</span>
+                    <span class="text-xl font-semibold">0</span>
                     <span class="inline-block px-2 py-px ml-2 text-xs text-green-500 bg-green-100 rounded-md">
-                      +4.7%
+                      +0%
                     </span>
                   </div>
                   <div>
@@ -1326,9 +1298,38 @@ if(isset($_POST['sub'])){
                     </div>
                   </div>
                   <!-- Chart -->
-                  <div class="relative p-4 h-72">
-                    <canvas id="barChart"></canvas>
-                  </div>
+                 
+                       
+                          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                          <script type="text/javascript">
+                            google.charts.load('current', {'packages':['bar']});
+                            google.charts.setOnLoadCallback(drawChart);
+
+                            function drawChart() {
+                              var data = google.visualization.arrayToDataTable([
+                                ['', 'Faturamento', 'Clientes', 'Comandos'],
+                                
+                                ['2021', 0, 5, 0]
+                              ]);
+
+                              var options = {
+                                chart: {
+                                  title: '',
+                                }
+                              };
+
+                              var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+                              chart.draw(data, google.charts.Bar.convertOptions(options));
+                            }
+                          </script>
+                        
+                        <body>
+                          <div id="columnchart_material" style="width: 1000px; height: 400px;"></div>
+                        </body>
+                      
+
+
                 </div>
 
                 <!-- Doughnut chart card -->
@@ -1353,9 +1354,12 @@ if(isset($_POST['sub'])){
                     </div>
                   </div>
                   <!-- Chart -->
-                  <div class="relative p-4 h-72">
-                    <canvas id="doughnutChart"></canvas>
-                  </div>
+                  
+                    
+                      <body>
+                        <div id="donutchart" style="width: 900px; height: 500px;"></div>
+                      </body>
+                    
                 </div>
               </div>
 
@@ -1399,9 +1403,36 @@ if(isset($_POST['sub'])){
                     </div>
                   </div>
                   <!-- Chart -->
-                  <div class="relative p-4 h-72">
-                    <canvas id="lineChart"></canvas>
-                  </div>
+                  <html>
+
+                      <script type="text/javascript">
+                        google.charts.load('current', {'packages':['corechart']});
+                        google.charts.setOnLoadCallback(drawChart);
+
+                        function drawChart() {
+                          var data = google.visualization.arrayToDataTable([
+                            ['', 'Pedidos', 'Comandos'],
+                            ['2021',  1.2,      1],
+                            ['2021',  1.2,      1]
+                          ]);
+
+                          var options = {
+                            title: '',
+                            curveType: 'function',
+                            legend: { position: 'bottom' }
+                          };
+
+                          var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+                          chart.draw(data, options);
+                        }
+                      </script>
+                    </head>
+                    <body>
+                      <div id="curve_chart" style="width: 1000px; height: 300px"></div>
+                    </body>
+
+
                 </div>
               </div>
             </div>

@@ -1,6 +1,5 @@
 <?php
 include 'connect.php';
-include 'checkLogin.php';
 
 if(isset($_POST['sub'])){
     $t=$_POST['text'];
@@ -31,6 +30,8 @@ if(isset($_POST['sub'])){
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" href="Rocket/css/perfil.css">
 
+<title>RocketHome</title>
+<link rel="shortcut icon" href="Rocket/images/logo.png" type="image/x-png"/>
 
 <!------ Include the above in your HEAD tag ---------->
 <header>

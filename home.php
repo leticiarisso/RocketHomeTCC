@@ -2,6 +2,7 @@
     include 'connect.php';
     include 'checkLogin.php';
 
+
     $s="select * from reg where id='$_SESSION[id]'";
     $qu= mysqli_query($con, $s);
     $f=mysqli_fetch_assoc($qu);
@@ -29,7 +30,7 @@
 			<ul class ="nav__links">
 				
 				  <li class="nav-item">
-					<a class="nav-link" href="#">DIFERENCIAIS</a>
+					<a class="nav-link" href="diferenciais.php">DIFERENCIAIS</a>
 				  </li>
 				  <li>|</li>
 				  <li class="nav-item">
@@ -97,9 +98,31 @@
 		  <img src="Rocket/images/Planos/Luxo.jpg" alt="plano" style="width:100%">
 		</div>
 </div>
+
 </div>
 
+<style>
+.footer {
+	padding: 40px 41%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(132, 0, 255);;
+  justify-content: center;
+  text-align:center;
+  color:white;
+  font-family: 'Bebas Neue';
+  font-size: 120%;
+}
 
+
+</style>
+
+<div class="footer">
+<img class="logo" src="Rocket/images/Logo3.png" alt="logo" >
+<p>
+<p>Copyright © RocketHome</p>
+</div>
 
 </body>
 </html>

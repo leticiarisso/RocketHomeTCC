@@ -122,13 +122,7 @@ require_once ("php/operation.php");
                   >
                     Início
                   </a>
-                  <a
-                    href="#"
-                    role="menuitem"
-                    class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700"
-                  >
-                    Gestão de Projetos 
-                  </a>
+                 
                   <a
                     href="franqueados.php"
                     role="menuitem"
@@ -187,26 +181,13 @@ require_once ("php/operation.php");
                   <!-- active & hover classes 'text-gray-700 dark:text-light' -->
                   <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
                   <a
-                    href="#"
+                    href="gerar_pdf.php"
                     role="menuitem"
                     class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:text-gray-400 dark:hover:text-light hover:text-gray-700"
                   >
-                    Faturamento
+                    Relatório
                   </a>
-                  <a
-                    href="#"
-                    role="menuitem"
-                    class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:text-gray-400 dark:hover:text-light hover:text-gray-700"
-                  >
-                    Clientes
-                  </a>
-                  <a
-                    href="#"
-                    role="menuitem"
-                    class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700"
-                  >
-                    Pedidos
-                  </a>
+                  
                   <!-- <a
                     href="#"
                     role="menuitem"
@@ -785,13 +766,7 @@ require_once ("php/operation.php");
                     >
                       Default
                     </a>
-                    <a
-                      href="#"
-                      role="menuitem"
-                      class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700"
-                    >
-                      Gestão de Projetos
-                    </a>
+                    
                     <a
                       href="#"
                       role="menuitem"
@@ -1165,9 +1140,9 @@ require_once ("php/operation.php");
                     >
                       Faturamento
                     </h6>
-                    <span class="text-xl font-semibold">R$330,000</span>
+                    <span class="text-xl font-semibold">R$0</span>
                     <span class="inline-block px-2 py-px ml-2 text-xs text-green-500 bg-green-100 rounded-md">
-                      +1.4%
+                      +0%
                     </span>
                   </div>
                   <div>
@@ -1198,9 +1173,9 @@ require_once ("php/operation.php");
                     >
                       Clientes
                     </h6>
-                    <span class="text-xl font-semibold">391</span>
+                    <span class="text-xl font-semibold">5</span>
                     <span class="inline-block px-2 py-px ml-2 text-xs text-green-500 bg-green-100 rounded-md">
-                      +2.6%
+                      +1%
                     </span>
                   </div>
                   <div>
@@ -1231,9 +1206,9 @@ require_once ("php/operation.php");
                     >
                       Pedidos
                     </h6>
-                    <span class="text-xl font-semibold">3,921</span>
+                    <span class="text-xl font-semibold">0</span>
                     <span class="inline-block px-2 py-px ml-2 text-xs text-green-500 bg-green-100 rounded-md">
-                      +2.1%
+                      +0%
                     </span>
                   </div>
                   <div>
@@ -1264,9 +1239,9 @@ require_once ("php/operation.php");
                     >
                       Comandos
                     </h6>
-                    <span class="text-xl font-semibold">33,516</span>
+                    <span class="text-xl font-semibold">0</span>
                     <span class="inline-block px-2 py-px ml-2 text-xs text-green-500 bg-green-100 rounded-md">
-                      +4.7%
+                      +0%
                     </span>
                   </div>
                   <div>
